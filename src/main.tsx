@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client'; // Correto para React 18
+import ReactDOM from 'react-dom/client'; 
 import App from './App.tsx';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import theme from './theme'; // Certifique-se de ter o tema definido corretamente
+import theme from './theme'; 
 
-// Corrigindo a renderização usando `ReactDOM.createRoot()`
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
