@@ -3,8 +3,8 @@ import { MaquinaDeEscrever } from "../../../../componentes/MaquinaDeEscrever/Maq
 
 
 
-const StyledSobreMim = styled('section')(({ theme }) => ({
-  background: "radial-gradient( #8e43b0, #7b1fa2)", // Corrigindo a sintaxe do background
+const StyledSobreMim = styled('div')(({ theme }) => ({
+  background: "radial-gradient( #8e43b0, #7b1fa2)", 
   animation: 'fadeInBackground 3s ease-out infinite',
   minHeight: '100vh', 
 }));
@@ -20,10 +20,12 @@ const SobreMim = () => {
                 variant="h2"
                 color="secondary"
                 textAlign="center"
-                padding="1.5em 0"
+                padding="1.3em 0"
                 gutterBottom
+                fontWeight="200"
               >
-                <MaquinaDeEscrever text="Sobre Mim" delay={150} />
+                <MaquinaDeEscrever text="Sobre Mim" typeSpeed={80}
+          eraseSpeed={50} />
               </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6}>

@@ -8,7 +8,7 @@ interface StyledButtonProps {
 const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
   const Button = styled("button")(({ theme }) => ({
     border: `1px solid ${theme.palette.primary.contrastText}`,
-    backgroundColor: "transparent",
+    backgroundColor: "#441752",
     borderRadius: "3px",
     padding: "5px 20px", // Corrigi "Padding" para "padding"
     width: "100%",

@@ -7,11 +7,11 @@ let theme = createTheme({
       main: '#7b1fa2', 
     },
     secondary: {
-      main: '#c5e1a5', 
+      main: '#F1E3D3', 
     },
   },
   typography: {
-    fontFamily:  "IBM Plex Sans, serif", 
+    fontFamily:  "IBM Plex Sans,serif", 
   },});
 
 theme = responsiveFontSizes(theme);

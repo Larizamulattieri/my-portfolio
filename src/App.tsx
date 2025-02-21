@@ -1,6 +1,9 @@
 
 import Home from './pages/Home/home';
-import './styles.css'; 
+import './style/styles.css'; 
+
+
+
 
 const App = ()=> {
 
