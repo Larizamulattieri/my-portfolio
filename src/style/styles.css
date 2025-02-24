@@ -236,19 +236,3 @@
 }
 
 
-#habilidades{
-    margin: 0;
-    height: auto;
-    font-weight: 100;
-    background: radial-gradient (#8e43b0, #7b1fa2);
-    overflow-y:auto;
-    animation:fadeIn 1 1s ease-out;
-  }
-#projects{
-  margin: 0;
-  height: auto;
-  font-weight: 100;
-  background: radial-gradient (#8e43b0, #7b1fa2);
-  overflow-y:auto;
-  animation:fadeIn 1 1s ease-out;
-}

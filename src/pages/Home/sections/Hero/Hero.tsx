@@ -59,9 +59,9 @@ const Hero = () => {
                                 <Typography className="hero-text" color="secondary" variant="h3" fontSize="1.5rem" textAlign="center" fontWeight="270">
                                     Me chamo Lariza Mulattieri
                                 </Typography>
-                                <Typography className="hero-text" color="secondary" variant="h4" textAlign="center" paragraph fontWeight="200" >
+                                {/* <Typography className="hero-text" color="secondary" variant="h4" textAlign="center" paragraph fontWeight="200" >
                                     E sou Desenvolvedora Web
-                                </Typography>
+                                </Typography> */}
                                 <Grid container spacing={2} justifyContent="center" pt={3} >
                                     <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                         <StyledButton>

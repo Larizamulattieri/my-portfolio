@@ -24,7 +24,7 @@ const Footer = () => {
             <Link href="https://www.linkedin.com/in/larizamulattieri" target="_blank" color="inherit" sx={{ marginRight: "1em" }}  border="1px solid" borderRadius="1em" padding="0.5em">
               LinkedIn
             </Link>
-            <Link href="https://github.com/larizamulattieri" target="_blank" color="inherit" border="1px solid" borderRadius="1em" padding="6.5px 13px">
+            <Link href="https://www.linkedin.com/in/lariza-mulattieri-7a1a65235/"target="_blank" color="inherit" border="1px solid" borderRadius="1em" padding="6.5px 13px">
               GitHub
             </Link>
           </Typography>

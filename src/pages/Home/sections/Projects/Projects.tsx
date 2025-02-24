@@ -8,13 +8,13 @@ const projetos = [
     nome: "Alura Book",
     descricao: "Aplicação para controle de livros, desenvolvida com HTML, CSS e JavaScript. O projeto foi baseado em um curso de HTML, CSS e Responsividade, com foco em melhorar a experiência do usuário em dispositivos móveis.",
     link: "https://larizamulattieri.github.io/alurabook/",
-    imagem: "/alurabook.png"
+    imagem: "alurabook.png"
   },
   {
     nome: "Jogo do Número Secreto",
     descricao: "Jogo simples de adivinhar um número aleatório, desenvolvido com HTML, CSS e JavaScript. O projeto foi criado como parte de um curso de Lógica de Programação, com ênfase na interação com o usuário e controle de fluxo.",
     link: "https://larizamulattieri.github.io/jogo-do-numero-secreto-2/",
-    imagem: "/jogoDoNumeroSecreto.png"
+    imagem: "jogoDoNumeroSecreto.png"
   },
   {
     nome: "7 Days of Code",
@@ -24,14 +24,23 @@ const projetos = [
   },
   {
     nome: "Alura Plus",
-    descricao: "Projeto desenvolvido com HTML e CSS para iniciantes, abordando conceitos de criação de páginas e boas práticas no design de interfaces.",
+    descricao: "Projeto desenvolvido com HTML e CSS para iniciantes, abordando conceitos de criação de páginas e boas práticas no design de interfaces. Projeto em andamento",
     link: "https://larizamulattieri.github.io/Aluraplus/",
-    imagem:"/aluraplus.png" 
-  }
+    imagem:"aluraplus.png" 
+  },
+  {nome: "Em breve",
+  descricao: "Projetos em andamento...",
+  link: ".",
+  imagem:"." 
+}, 
+{nome: "Em breve",
+  descricao: "Projetos em andamento...",
+  link: ".",
+  imagem:"." 
+}
 ];
 
-// Estilo para a seção de projetos
-const StyledProjects = styled('div')(({ theme }) => ({
+const StyledProjects = styled('div')(() => ({
   background: "radial-gradient(#8e43b0, #7b1fa2)", 
   minHeight: '100vh', 
   padding: '2em'
@@ -43,9 +52,7 @@ const Projetos = () => {
       <Typography variant="h2" align="center" gutterBottom color="#F1E3D3" fontWeight="200" padding="1.5em">
         <MaquinaDeEscrever
           text="Meus Projetos"
-          cursorColor="#F1E3D3"
-          typeSpeed={80}
-          eraseSpeed={50}
+      
         />
       </Typography>
       <Grid container spacing={4} justifyContent="center">

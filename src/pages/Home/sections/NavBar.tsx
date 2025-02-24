@@ -1,5 +1,17 @@
 import { useState } from "react";
-import { AppBar, MenuItem, Toolbar, styled, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
+import {
+  AppBar,
+  MenuItem,
+  Toolbar,
+  styled,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const StyledNavBar = styled(Toolbar)({
@@ -41,10 +53,17 @@ const NavBar: React.FC<NavBarProps> = ({
             <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
-            <Drawer anchor="left" open={menuOpen} onClose={toggleDrawer(false)} >
+            <Drawer anchor="left" open={menuOpen} onClose={toggleDrawer(false)}>
               <List>
                 {menuItems.map((item, index) => (
-                  <ListItem button key={index} onClick={() => { item.action(); setMenuOpen(false); }}>
+                  <ListItem
+                    
+                    key={index} 
+                    onClick={() => {
+                      item.action();
+                      setMenuOpen(false); 
+                    }}
+                  >
                     <ListItemText primary={item.text} />
                   </ListItem>
                 ))}
@@ -53,7 +72,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </>
         ) : (
           menuItems.map((item, index) => (
-            <MenuItem color ="primary" key={index} onClick={item.action}>
+            <MenuItem key={index} color="primary" onClick={item.action}>
               {item.text}
             </MenuItem>
           ))
