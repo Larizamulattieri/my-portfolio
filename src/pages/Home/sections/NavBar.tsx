@@ -1,8 +1,11 @@
-import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+import { useState } from "react";
+import { AppBar, MenuItem, Toolbar, styled, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const StyledNavBar = styled(Toolbar)({
   display: "flex",
-  justifyContent: "space-evenly"
+  justifyContent: "space-between",
+  padding: "0 1rem",
 });
 
 interface NavBarProps {
@@ -16,12 +19,45 @@ const NavBar: React.FC<NavBarProps> = ({
   scrollToHabilidades,
   scrollToProjetos,
 }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); // Verifica se a tela é pequena
+
+  const toggleDrawer = (open: boolean) => () => {
+    setMenuOpen(open);
+  };
+
+  const menuItems = [
+    { text: "Sobre mim", action: scrollToSobreMim },
+    { text: "Habilidades", action: scrollToHabilidades },
+    { text: "Projetos", action: scrollToProjetos },
+  ];
+
   return (
     <AppBar position="fixed">
       <StyledNavBar>
-        <MenuItem onClick={scrollToSobreMim}>Sobre mim</MenuItem>
-        <MenuItem onClick={scrollToHabilidades}>Habilidades</MenuItem>
-        <MenuItem onClick={scrollToProjetos}>Projetos</MenuItem>
+        {isMobile ? (
+          <>
+            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)}>
+              <MenuIcon />
+            </IconButton>
+            <Drawer anchor="left" open={menuOpen} onClose={toggleDrawer(false)} >
+              <List>
+                {menuItems.map((item, index) => (
+                  <ListItem button key={index} onClick={() => { item.action(); setMenuOpen(false); }}>
+                    <ListItemText primary={item.text} />
+                  </ListItem>
+                ))}
+              </List>
+            </Drawer>
+          </>
+        ) : (
+          menuItems.map((item, index) => (
+            <MenuItem color ="primary" key={index} onClick={item.action}>
+              {item.text}
+            </MenuItem>
+          ))
+        )}
       </StyledNavBar>
     </AppBar>
   );
